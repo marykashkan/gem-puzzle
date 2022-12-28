@@ -1,2 +1,3 @@
-# marykashkan-JSFE2022Q3
-Private repository for @marykashkan
+# Gem-puzzle
+## Deploy
+https://marykashkan.github.io/gem-puzzle/gem-puzzle/ 
