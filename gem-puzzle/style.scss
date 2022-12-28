@@ -1,0 +1,157 @@
+$font-stack: Arial, sans-serif;
+$main-font-size: 16px;
+
+@function rem($size) {
+    @return $size /$main-font-size * 1rem;
+}
+
+$main-button-color: #0b8b90;
+$active-button-color: #505252;
+$blank-cell-color: #abb3b3;
+$dark: #000000;
+$bright: #ffffff;
+
+$desktop-size: 1280px;
+$tablet-size: 768px;
+$mobile-size: 320px;
+
+$basic-transition: all 0.5s ease;
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: $font-stack;
+  height: 100%;
+  width: 100%;
+  font-size: $main-font-size;
+  line-height: 110%;
+  font-style: normal;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+header {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: rem(488px);
+    padding: rem(30px) rem(5px) rem(10px);
+}
+
+.buttons-row {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 0px rem(30px) 0px;    
+}
+
+.button {
+    background-color: $main-button-color;
+    font-size: rem(24px);
+    color: $bright;
+    padding: rem(5px) rem(5px);
+    border-radius: 5%;
+    cursor: pointer;
+    transition: $basic-transition;  
+}
+
+.button:active {
+    background-color: $active-button-color;  
+}    
+
+.live-row {
+    text-align: center;
+    font-size: rem(18px);    
+}
+
+.moves {
+    padding-right: rem(100px);
+}
+
+main {
+    display: grid;
+    max-width: rem(487px);
+    margin-left: auto;
+    margin-right: auto;
+    //border: 1px solid $active-button-color;
+    grid-template-columns: repeat(4, 121.5px);
+    grid-template-rows: repeat(4, 1fr);
+
+}
+
+.table-cell {
+    font-size: rem(28px);
+    padding: rem(50px);
+    display: flex;
+    justify-content: center;    
+    border: rem(2px) solid $active-button-color;
+    cursor: pointer;
+}    
+
+.blank {
+    background-color: $blank-cell-color;
+}
+
+footer {
+    padding: rem(10px);
+}
+
+footer > p {
+    text-align: center;
+    margin-bottom: rem(20px);    
+    transition: $basic-transition;
+}
+
+footer a {
+    padding-right: rem(5px);
+}
+
+@media screen and (max-width: $tablet-size) {
+    
+}
+
+@media screen and (max-width: 500px) {
+    html {
+       font-size: rem(12px); 
+    }
+
+    header {
+        padding-left: rem(0px);
+        padding-right: rem(0px);
+    }
+
+    main {
+        display: grid;
+        max-width: rem(322px);
+        margin-left: auto;
+        margin-right: auto;
+        //border: 1px solid $active-button-color;
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: repeat(4, 1fr);
+    
+    }
+
+    .table-cell {
+        font-size: rem(28px);
+        padding: rem(30px);
+        display: flex;
+        justify-content: center;    
+        border: rem(2px) solid $active-button-color;
+    }   
+}

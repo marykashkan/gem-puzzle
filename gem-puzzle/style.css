@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  line-height: 110%;
+  font-style: normal;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 30.5rem;
+  padding: 1.875rem 0.3125rem 0.625rem;
+}
+
+.buttons-row {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px 0px 1.875rem 0px;
+}
+
+.button {
+  background-color: #0b8b90;
+  font-size: 1.5rem;
+  color: #ffffff;
+  padding: 0.3125rem 0.3125rem;
+  border-radius: 5%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.button:active {
+  background-color: #505252;
+}
+
+.live-row {
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+.moves {
+  padding-right: 6.25rem;
+}
+
+main {
+  display: grid;
+  max-width: 30.4375rem;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(4, 121.5px);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.table-cell {
+  font-size: 1.75rem;
+  padding: 3.125rem;
+  display: flex;
+  justify-content: center;
+  border: 0.125rem solid #505252;
+  cursor: pointer;
+}
+
+.blank {
+  background-color: #abb3b3;
+}
+
+footer {
+  padding: 0.625rem;
+}
+
+footer > p {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  transition: all 0.5s ease;
+}
+
+footer a {
+  padding-right: 0.3125rem;
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 0.75rem;
+  }
+  header {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  main {
+    display: grid;
+    max-width: 20.125rem;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .table-cell {
+    font-size: 1.75rem;
+    padding: 1.875rem;
+    display: flex;
+    justify-content: center;
+    border: 0.125rem solid #505252;
+  }
+}/*# sourceMappingURL=style.css.map */

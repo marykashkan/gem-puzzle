@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/icons/favicon3.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Gem Puzzle</title>
+  </head>
+  <body>
+    <h1 class="title"></h1>
+    <header>
+      <form class="buttons-row">
+        <input
+          class="button button-start"
+          type="button"
+          value="Shuffle and start"
+        />
+        <input class="button button-stop" type="button" value="Stop" />
+        <input class="button button-save" type="button" value="Save" />
+        <input class="button button-results" type="button" value="Results" />
+      </form>
+      <p class="live-row">
+        Moves: <span class="moves"></span> Time: <span class="time"> </span>
+      </p>
+    </header>
+    <footer class="footer">
+      <p>Frame size: <span class="selected-size">4x4</span></p>
+      <p>
+        Other sizes: <a class="size3x3" href="#">3x3</a>
+        <a class="size4x4" href="#">4x4</a><a class="size5x5" href="#">5x5</a
+        ><a class="size6x6" href="#">6x6</a><a class="size7x7" href="#">7x7</a
+        ><a class="size8x8" href="#">8x8</a>
+      </p>
+    </footer>
+    <script async src="./dist/index.bundle.js"></script>
+  </body>
+</html>
